@@ -6,3 +6,6 @@ build:output/main.o output/sum.o
 	gcc output/main.o output/sum.o -o output/main.exe
 run:
 	output/main.exe
+
+clean:
+	rm output/*
