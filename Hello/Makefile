@@ -1,10 +1,8 @@
-all:
-	gcc -E main.c -o main.i
-	gcc -S main.i -o main.s
-	as main.s -o main.o
-	gcc -E sum.c -o sum.i
-	gcc -S sum.i -o sum.s
-	as sum.s -o sum.o
-	gcc -v -o main main.o sum.o
+output/main.o:src/main.c
+	gcc -c -I./include src/main.c -o output/main.o
+output/sum.o:src/sum.c
+	gcc -c -I./include src/sum.c -o output/sum.o
+build:output/main.o output/sum.o
+	gcc output/main.o output/sum.o -o output/main.exe
 run:
-	main.exe
+	output/main.exe
