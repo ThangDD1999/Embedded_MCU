@@ -12,6 +12,7 @@ output/$(PROJECT_NAME).o:src/$(PROJECT_NAME).c
 build:$(OBJ_FILES)
 	@gcc $(OBJ_FILES) -o output/main.exe
 	@echo "Build Done!"
+	@echo $(OBJ_FILES)
 .PHONY: run
 run:
 	output/main.exe
@@ -19,3 +20,6 @@ run:
 clean:
 	@rm output/*
 	@echo "Clear all output file!"
+
+print-%:
+	@echo $($(subst print-,,$@))
