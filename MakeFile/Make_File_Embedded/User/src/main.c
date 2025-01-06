@@ -26,9 +26,9 @@ int main(void)
 	while(1)
 	{
 		GPIOC->ODR |= (1<<13);
-		myDelay(100);
+		myDelay(150);
 		GPIOC->ODR &= ~(1<<13);
-		myDelay(100);
+		myDelay(150);
 	}
 	return 0;
 }
