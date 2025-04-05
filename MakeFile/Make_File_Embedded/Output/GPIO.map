@@ -166,13 +166,13 @@ LOAD linker stubs
  .debug_line    0x0000013d      0x12d ./Output/main.o
  .debug_line    0x0000026a      0x16a ./Output/stm32_startup.o
 
-.debug_str      0x00000000      0x1ef
- .debug_str     0x00000000      0x162 ./Output/GPIO.o
-                                0x19f (size before relaxing)
- .debug_str     0x00000162       0x15 ./Output/main.o
-                                0x15c (size before relaxing)
- .debug_str     0x00000177       0x78 ./Output/stm32_startup.o
-                                0x1b4 (size before relaxing)
+.debug_str      0x00000000      0x1f6
+ .debug_str     0x00000000      0x169 ./Output/GPIO.o
+                                0x1a6 (size before relaxing)
+ .debug_str     0x00000169       0x15 ./Output/main.o
+                                0x163 (size before relaxing)
+ .debug_str     0x0000017e       0x78 ./Output/stm32_startup.o
+                                0x1bb (size before relaxing)
 
 .comment        0x00000000       0x49
  .comment       0x00000000       0x49 ./Output/GPIO.o

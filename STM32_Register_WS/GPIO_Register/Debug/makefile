@@ -59,8 +59,8 @@ all: main-build
 main-build: GPIO_Register.elf secondary-outputs
 
 # Tool invocations
-GPIO_Register.elf GPIO_Register.map: $(OBJS) $(USER_OBJS) D:\Work_Space\STM32\STM32_Register_WS\GPIO_Register\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "GPIO_Register.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Work_Space\STM32\STM32_Register_WS\GPIO_Register\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_Register.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+GPIO_Register.elf GPIO_Register.map: $(OBJS) $(USER_OBJS) D:\Work_Space\Embedded_MCU\STM32_Register_WS\GPIO_Register\STM32F103C8TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "GPIO_Register.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Work_Space\Embedded_MCU\STM32_Register_WS\GPIO_Register\STM32F103C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_Register.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
